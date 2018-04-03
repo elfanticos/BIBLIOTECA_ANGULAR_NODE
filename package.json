@@ -1,0 +1,21 @@
+{
+  "name": "descargar_archivo_angular_node",
+  "version": "0.0.1",
+  "description": "Manera facil de descargar un archivo traido desde el servidor a nuestro angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Descargar",
+    "nodejs",
+    "angular"
+  ],
+  "author": "jmeza",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap3": "^3.3.5",
+    "file-saver": "^1.3.8",
+    "jquery": "^3.3.1"
+  }
+}

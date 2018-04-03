@@ -1,0 +1,23 @@
+{
+  "name": "servidor",
+  "version": "0.0.1",
+  "description": "Descargar archivos con angular y nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "angular",
+    "descargar"
+  ],
+  "author": "jmeza",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "pg-promise": "^8.2.2"
+  }
+}
