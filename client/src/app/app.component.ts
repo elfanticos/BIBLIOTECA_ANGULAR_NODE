@@ -19,5 +19,17 @@ export class AppComponent {
 			result => saveAs(result, filename),
 			error => console.log(<any>error)
 		);
-    }
+  }
+
+  downloadMultiple() {
+    // var filesnames = ['prueba1.txt','prueba2.txt'];
+    var filesnames = ['prueba1.txt'];
+    this._appService.downloadMultiple(filesnames).subscribe(
+      result => {
+        saveAs(result, (filesnames.length > 1 ? 'archivos.zip' : filesnames[0]));
+      },
+      error => console.log(<any>error)
+    ); 
+
+  }
 }

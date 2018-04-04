@@ -24,4 +24,18 @@ export class AppService {
 			}
 		);
 	}
+
+	downloadMultiple(filesnames:Array<any>):Observable<Blob> {
+		var body = {filesnames:filesnames};
+  		let headers = new Headers({'Content-Type' : 'application/json'});
+      	let options = new RequestOptions({
+          headers: headers, 
+          responseType: ResponseContentType.Blob
+        });
+		return this._http.post(this.url+'downloadMultipleInZip',body,options).map(
+			(res) => {
+				return <Blob>res.blob()
+			}
+		);
+	}
 }
