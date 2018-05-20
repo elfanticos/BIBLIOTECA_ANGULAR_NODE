@@ -10,13 +10,17 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component';
 import { FormComponent } from './components/form/form.component';
+import { NewCourseFormComponentComponent } from './new-course-form-component/new-course-form-component.component';
+import { FormFormBuilderComponent } from './form-form-builder/form-form-builder.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    NewCourseFormComponentComponent,
+    FormFormBuilderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+<form class="col-md-6">
+  <input type="text" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
+  <ul class="list-group">
+    <li *ngFor="let topic of topics.controls" class="list-group-item" (click)="removeTopic(topic)">{{topic.value}}</li>
+  </ul>
+</form>
+
+<br/>
+<br/>
+<a [routerLink]="['/']" class="btn btn-default">Regresar</a>
