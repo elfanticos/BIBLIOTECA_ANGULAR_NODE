@@ -7,7 +7,8 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 
 export class AppService {
-	url:string = 'http://localhost:3978/';
+	// url:string = 'http://localhost:3978/';
+	url: string = 'http://jsonplaceholder.typicode.com/posts';
 
 	constructor(private _http:Http) {}
 
@@ -37,5 +38,9 @@ export class AppService {
 				return <Blob>res.blob()
 			}
 		);
+	}
+	getDataPost() {
+		let headers = new Headers({'Content-Type': 'application/json'});
+		return this._http.get(this.url, null).map(res => res.json());
 	}
 }

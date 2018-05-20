@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home.component';
 import { FormComponent } from './components/form/form.component';
 import { NewCourseFormComponentComponent } from './new-course-form-component/new-course-form-component.component';
 import { FormFormBuilderComponent } from './form-form-builder/form-form-builder.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormFormBuilderComponent } from './form-form-builder/form-form-builder.
     HomeComponent,
     FormComponent,
     NewCourseFormComponentComponent,
-    FormFormBuilderComponent
+    FormFormBuilderComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
