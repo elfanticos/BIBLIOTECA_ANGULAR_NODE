@@ -43,4 +43,9 @@ export class AppService {
 		let headers = new Headers({'Content-Type': 'application/json'});
 		return this._http.get(this.url, null).map(res => res.json());
 	}
+
+	createPost() {
+		let headers = new Headers({ 'Content-Type': 'application/json' });
+		return this._http.post(this.url, null, { headers: headers}).map(res => res.json());
+	}
 }

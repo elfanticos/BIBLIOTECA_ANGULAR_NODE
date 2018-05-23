@@ -1,6 +1,6 @@
 <a [routerLink]="['/']" class="btn btn-default">Regresar</a>
 <br>
-<input type="text" class="form-control" name="title" placeholder="Title of new Post" #title (keypup.enter)="createPost(title.value)">
+<input type="text" class="form-control" name="title" placeholder="Title of new Post" #title (keyup.enter)="createPost(title)">
 <br><br>
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let post of dataPost">{{post.title}}</li>

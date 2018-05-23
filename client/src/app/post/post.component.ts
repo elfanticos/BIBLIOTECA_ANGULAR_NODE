@@ -24,10 +24,25 @@ export class PostComponent implements OnInit {
     this._appService.getDataPost().subscribe(
       result => {
         this.dataPost = result;
+
       }, err => {
         console.log(err);
       }
     );
+  }
+
+  createPost(input:HTMLInputElement) {
+    this._appService.createPost().subscribe(
+      result => {
+        this.dataPost.unshift({
+          title: input.value,
+          id    : result.id
+        });
+        input.value = '';
+      }, err => {
+        console.log(err);
+      }
+    )
   }
 
 }
