@@ -38,7 +38,7 @@ export class PostComponent implements OnInit {
           title: input.value,
           id    : result.id
         });
-        input.value = '';
+        input.value = ''; 
       }, err => {
         console.log(err);
       }
