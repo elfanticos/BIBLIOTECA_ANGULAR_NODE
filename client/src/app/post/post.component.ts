@@ -34,11 +34,11 @@ export class PostComponent implements OnInit {
   createPost(input:HTMLInputElement) {
     this._appService.createPost().subscribe(
       result => {
-        this.dataPost.unshift({
-          title: input.value,
-          id    : result.id
-        });
-        input.value = ''; 
+        // this.dataPost.unshift({
+        //   title: input.value,
+        //   id    : result.id
+        // });
+        // input.value = ''; 
       }, err => {
         console.log(err);
       }

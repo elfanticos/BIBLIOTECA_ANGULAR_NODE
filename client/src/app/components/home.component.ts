@@ -1,7 +1,8 @@
+import { map } from 'rxjs/operators';
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
 import { saveAs } from 'file-saver';
-
+import { Observable} from 'rxjs';
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
@@ -11,7 +12,9 @@ import { saveAs } from 'file-saver';
 export class HomeComponent {
     title = 'app';
 
-    constructor(private _appService: AppService) { }
+    constructor(private _appService: AppService) { 
+        this.prueba();
+    }
 
     download() {
         var filename = 'prueba.txt';
@@ -22,8 +25,8 @@ export class HomeComponent {
     }
 
     downloadMultiple() {
-        // var filesnames = ['prueba1.txt','prueba2.txt'];
-        var filesnames = ['prueba1.txt'];
+        var filesnames = ['prueba1.txt','prueba2.txt'];
+        // var filesnames = ['prueba1.txt'];
         this._appService.downloadMultiple(filesnames).subscribe(
             result => {
                 saveAs(result, (filesnames.length > 1 ? 'archivos.zip' : filesnames[0]));
@@ -32,5 +35,6 @@ export class HomeComponent {
         );
 
     }
-
+    prueba() {
+    }
 }

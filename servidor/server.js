@@ -4,7 +4,7 @@ const pgpromise = require('pg-promise')(),
       db        = pgpromise("postgres://postgres:postgres@localhost:5432/smiledu");
 
 var  app  = require('./app'),
-	 port = process.env.PORT || 3978;
+	 port = process.env.PORT || 5002;
 
 db.connect();
 

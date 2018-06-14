@@ -5,9 +5,9 @@ var path = require('path'),
 
 function download(req, res) {
 	var filename = req.body.filename,
-	    filepath = path.join(__dirname,'../uploads') +'/'+filename,
+	    filepath = path.join(__dirname,'../public/uploads') +'/'+filename,
 	    data     = 'data hardcode servidor nodejs nuevo con promise';
-
+		console.log('llegue');
 	var promise = new Promise((resolve,reject) => {
 		//CREAR ARCHIVO
 		fs.appendFile(filepath, data, (err) => {
@@ -40,7 +40,7 @@ function download(req, res) {
 
 function downloadMultipleInZip(req,res) {
 	var files    = req.body.filesnames,// ---> ARRAY FILES
-	    fileUbic = path.join(__dirname,'../uploads') +'/'; // ----> PATH DONDE SE CREARÁ LOS ARCHIVOS
+	    fileUbic = path.join(__dirname,'../public/uploads') +'/'; // ----> PATH DONDE SE CREARÁ LOS ARCHIVOS
 
 	new Promise((resolve,reject)=> {
 		crearArchivos(files,fileUbic, (arryPath) => {
